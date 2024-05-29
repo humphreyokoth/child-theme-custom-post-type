@@ -1,0 +1,297 @@
+[10-May-2024 05:24:44 UTC] PHP Deprecated:  Function print_emoji_styles is deprecated since version 6.4.0! Use wp_enqueue_emoji_styles instead. in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[10-May-2024 08:56:58 UTC] PHP Warning:  mysqli_real_connect(): (08004/1040): Too many connections in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[10-May-2024 10:57:01 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "twentytwentyfour_styles" not found or invalid function name in /var/www/html/wordpress/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#1 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#2 /var/www/html/wordpress/wp-includes/script-loader.php(2265): do_action()
+#3 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): wp_enqueue_scripts()
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#5 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#6 /var/www/html/wordpress/wp-includes/general-template.php(3050): do_action()
+#7 /var/www/html/wordpress/wp-content/themes/twentytwentyone/header.php(20): wp_head()
+#8 /var/www/html/wordpress/wp-includes/template.php(810): require_once('...')
+#9 /var/www/html/wordpress/wp-includes/template.php(745): load_template()
+#10 /var/www/html/wordpress/wp-includes/general-template.php(48): locate_template()
+#11 /var/www/html/wordpress/wp-content/themes/twentytwentyone/page.php(12): get_header()
+#12 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#13 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#14 /var/www/html/wordpress/index.php(17): require('...')
+#15 {main}
+  thrown in /var/www/html/wordpress/wp-includes/class-wp-hook.php on line 324
+[10-May-2024 10:58:08 UTC] PHP Fatal error:  Uncaught TypeError: method_exists(): Argument #1 ($object_or_class) must be of type object|string, null given in /var/www/html/wordpress/wp-content/plugins/essential-addons-for-elementor-lite/includes/Classes/Asset_Builder.php:392
+Stack trace:
+#0 /var/www/html/wordpress/wp-content/plugins/essential-addons-for-elementor-lite/includes/Classes/Asset_Builder.php(392): method_exists()
+#1 /var/www/html/wordpress/wp-content/plugins/essential-addons-for-elementor-lite/includes/Classes/Asset_Builder.php(121): Essential_Addons_Elementor\Classes\Asset_Builder->load_commnon_asset()
+#2 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): Essential_Addons_Elementor\Classes\Asset_Builder->frontend_asset_load()
+#3 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#4 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#5 /var/www/html/wordpress/wp-includes/script-loader.php(2265): do_action()
+#6 /var/www/html/wordpress/wp-includes/class-wp-customize-manager.php(457): wp_enqueue_scripts()
+#7 /var/www/html/wordpress/wp-includes/class-wp-customize-manager.php(582): WP_Customize_Manager->wp_die()
+#8 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): WP_Customize_Manager->setup_theme()
+#9 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#10 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#11 /var/www/html/wordpress/wp-settings.php(625): do_action()
+#12 /var/www/html/wordpress/wp-config.php(111): require_once('...')
+#13 /var/www/html/wordpress/wp-load.php(50): require_once('...')
+#14 /var/www/html/wordpress/wp-blog-header.php(13): require_once('...')
+#15 /var/www/html/wordpress/index.php(17): require('...')
+#16 {main}
+  thrown in /var/www/html/wordpress/wp-content/plugins/essential-addons-for-elementor-lite/includes/Classes/Asset_Builder.php on line 392
+[10-May-2024 11:02:52 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "twentytwentyfour_styles" not found or invalid function name in /var/www/html/wordpress/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#1 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#2 /var/www/html/wordpress/wp-includes/script-loader.php(2265): do_action()
+#3 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): wp_enqueue_scripts()
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#5 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#6 /var/www/html/wordpress/wp-includes/general-template.php(3050): do_action()
+#7 /var/www/html/wordpress/wp-content/themes/twentytwentyone/header.php(20): wp_head()
+#8 /var/www/html/wordpress/wp-includes/template.php(810): require_once('...')
+#9 /var/www/html/wordpress/wp-includes/template.php(745): load_template()
+#10 /var/www/html/wordpress/wp-includes/general-template.php(48): locate_template()
+#11 /var/www/html/wordpress/wp-content/themes/twentytwentyone/page.php(12): get_header()
+#12 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#13 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#14 /var/www/html/wordpress/index.php(17): require('...')
+#15 {main}
+  thrown in /var/www/html/wordpress/wp-includes/class-wp-hook.php on line 324
+[10-May-2024 11:12:30 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "twentytwentyfour_styles" not found or invalid function name in /var/www/html/wordpress/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#1 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#2 /var/www/html/wordpress/wp-includes/script-loader.php(2265): do_action()
+#3 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): wp_enqueue_scripts()
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#5 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#6 /var/www/html/wordpress/wp-includes/general-template.php(3050): do_action()
+#7 /var/www/html/wordpress/wp-content/themes/twentytwentyone/header.php(20): wp_head()
+#8 /var/www/html/wordpress/wp-includes/template.php(810): require_once('...')
+#9 /var/www/html/wordpress/wp-includes/template.php(745): load_template()
+#10 /var/www/html/wordpress/wp-includes/general-template.php(48): locate_template()
+#11 /var/www/html/wordpress/wp-content/themes/twentytwentyone/page.php(12): get_header()
+#12 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#13 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#14 /var/www/html/wordpress/index.php(17): require('...')
+#15 {main}
+  thrown in /var/www/html/wordpress/wp-includes/class-wp-hook.php on line 324
+[10-May-2024 11:19:48 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "twentytwentyfour_styles" not found or invalid function name in /var/www/html/wordpress/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#1 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#2 /var/www/html/wordpress/wp-includes/script-loader.php(2265): do_action()
+#3 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): wp_enqueue_scripts()
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#5 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#6 /var/www/html/wordpress/wp-includes/general-template.php(3050): do_action()
+#7 /var/www/html/wordpress/wp-content/themes/twentytwentyone/header.php(20): wp_head()
+#8 /var/www/html/wordpress/wp-includes/template.php(810): require_once('...')
+#9 /var/www/html/wordpress/wp-includes/template.php(745): load_template()
+#10 /var/www/html/wordpress/wp-includes/general-template.php(48): locate_template()
+#11 /var/www/html/wordpress/wp-content/themes/twentytwentyone/page.php(12): get_header()
+#12 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#13 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#14 /var/www/html/wordpress/index.php(17): require('...')
+#15 {main}
+  thrown in /var/www/html/wordpress/wp-includes/class-wp-hook.php on line 324
+[10-May-2024 11:38:08 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "twentytwentyfour_styles" not found or invalid function name in /var/www/html/wordpress/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#1 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#2 /var/www/html/wordpress/wp-includes/script-loader.php(2265): do_action()
+#3 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): wp_enqueue_scripts()
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#5 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#6 /var/www/html/wordpress/wp-includes/general-template.php(3050): do_action()
+#7 /var/www/html/wordpress/wp-content/themes/twentytwentyone/header.php(20): wp_head()
+#8 /var/www/html/wordpress/wp-includes/template.php(810): require_once('...')
+#9 /var/www/html/wordpress/wp-includes/template.php(745): load_template()
+#10 /var/www/html/wordpress/wp-includes/general-template.php(48): locate_template()
+#11 /var/www/html/wordpress/wp-content/themes/twentytwentyone/page.php(12): get_header()
+#12 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#13 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#14 /var/www/html/wordpress/index.php(17): require('...')
+#15 {main}
+  thrown in /var/www/html/wordpress/wp-includes/class-wp-hook.php on line 324
+[10-May-2024 12:10:40 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "astra_style" not found or invalid function name in /var/www/html/wordpress/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#1 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#2 /var/www/html/wordpress/wp-includes/script-loader.php(2265): do_action()
+#3 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): wp_enqueue_scripts()
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#5 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#6 /var/www/html/wordpress/wp-includes/general-template.php(3050): do_action()
+#7 /var/www/html/wordpress/wp-content/themes/astra/header.php(31): wp_head()
+#8 /var/www/html/wordpress/wp-includes/template.php(810): require_once('...')
+#9 /var/www/html/wordpress/wp-includes/template.php(745): load_template()
+#10 /var/www/html/wordpress/wp-includes/general-template.php(48): locate_template()
+#11 /var/www/html/wordpress/wp-content/themes/astra/page.php(20): get_header()
+#12 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#13 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#14 /var/www/html/wordpress/index.php(17): require('...')
+#15 {main}
+  thrown in /var/www/html/wordpress/wp-includes/class-wp-hook.php on line 324
+[10-May-2024 12:11:00 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "astra_style" not found or invalid function name in /var/www/html/wordpress/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#1 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#2 /var/www/html/wordpress/wp-includes/script-loader.php(2265): do_action()
+#3 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): wp_enqueue_scripts()
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#5 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#6 /var/www/html/wordpress/wp-includes/general-template.php(3050): do_action()
+#7 /var/www/html/wordpress/wp-content/themes/astra/header.php(31): wp_head()
+#8 /var/www/html/wordpress/wp-includes/template.php(810): require_once('...')
+#9 /var/www/html/wordpress/wp-includes/template.php(745): load_template()
+#10 /var/www/html/wordpress/wp-includes/general-template.php(48): locate_template()
+#11 /var/www/html/wordpress/wp-content/themes/astra/page.php(20): get_header()
+#12 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#13 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#14 /var/www/html/wordpress/index.php(17): require('...')
+#15 {main}
+  thrown in /var/www/html/wordpress/wp-includes/class-wp-hook.php on line 324
+[10-May-2024 12:12:39 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "astra_style" not found or invalid function name in /var/www/html/wordpress/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#1 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#2 /var/www/html/wordpress/wp-includes/script-loader.php(2265): do_action()
+#3 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): wp_enqueue_scripts()
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#5 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#6 /var/www/html/wordpress/wp-includes/general-template.php(3050): do_action()
+#7 /var/www/html/wordpress/wp-content/themes/astra/header.php(31): wp_head()
+#8 /var/www/html/wordpress/wp-includes/template.php(810): require_once('...')
+#9 /var/www/html/wordpress/wp-includes/template.php(745): load_template()
+#10 /var/www/html/wordpress/wp-includes/general-template.php(48): locate_template()
+#11 /var/www/html/wordpress/wp-content/themes/astra/page.php(20): get_header()
+#12 /var/www/html/wordpress/wp-includes/template-loader.php(106): include('...')
+#13 /var/www/html/wordpress/wp-blog-header.php(19): require_once('...')
+#14 /var/www/html/wordpress/index.php(17): require('...')
+#15 {main}
+  thrown in /var/www/html/wordpress/wp-includes/class-wp-hook.php on line 324
+[10-May-2024 12:40:09 UTC] PHP Deprecated:  Function print_emoji_styles is deprecated since version 6.4.0! Use wp_enqueue_emoji_styles instead. in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[20-May-2024 14:14:04 UTC] PHP Deprecated:  Function print_emoji_styles is deprecated since version 6.4.0! Use wp_enqueue_emoji_styles instead. in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[20-May-2024 15:19:59 UTC] Cron reschedule event error for hook: wp_update_user_counts, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"twicedaily","args":[],"interval":43200}
+[21-May-2024 06:40:46 UTC] WordPress database error Server shutdown in progress for query SELECT * FROM wp_posts WHERE post_parent = 48 AND post_name LIKE '48-autosave%' AND post_modified_gmt > '2024-05-20 15:26:54' AND post_author = 1 AND post_type = 'revision' made by require_once('wp-admin/admin.php'), do_action('admin_action_elementor'), WP_Hook->do_action, WP_Hook->apply_filters, Elementor\Core\Editor\Editor->init, Elementor\Core\Editor\Loader\V1\Editor_V1_Loader->print_root_template, include('/plugins/elementor/includes/editor-templates/editor-wrapper.php'), wp_head, do_action('wp_head'), WP_Hook->do_action, WP_Hook->apply_filters, wp_enqueue_scripts, do_action('wp_enqueue_scripts'), WP_Hook->do_action, WP_Hook->apply_filters, Elementor\Core\Editor\Editor->enqueue_scripts, Elementor\Core\Editor\Loader\V1\Editor_V1_Loader->enqueue_scripts, Elementor\Core\Editor\Loader\Common\Editor_Common_Scripts_Settings::get, Elementor\Core\Documents_Manager->get_doc_or_auto_save, Elementor\Core\Base\Document->get_autosave_id, Elementor\Utils::get_post_autosave
+[21-May-2024 06:40:46 UTC] WordPress database error Server shutdown in progress for query SELECT   wp_posts.*
+			 FROM wp_posts 
+			 WHERE 1=1  AND wp_posts.post_type = 'page' AND ((wp_posts.post_status = 'publish'))
+			 
+			 ORDER BY wp_posts.menu_order ASC, wp_posts.post_title ASC
+			  made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/astra/page.php'), get_header, locate_template, load_template, require_once('/themes/astra/header.php'), astra_header, do_action('astra_header'), WP_Hook->do_action, WP_Hook->apply_filters, astra_header_markup, astra_masthead, do_action('astra_masthead'), WP_Hook->do_action, WP_Hook->apply_filters, Astra_Builder_Header->desktop_header, get_template_part, locate_template, load_template, require('/themes/astra/template-parts/header/builder/desktop-builder-layout.php'), do_action('astra_primary_header'), WP_Hook->do_action, WP_Hook->apply_filters, Astra_Builder_Header->primary_header, get_template_part, locate_template, load_template, require('/themes/astra/template-parts/header/builder/header-row.php'), do_action('astra_render_header_column'), WP_Hook->do_action, WP_Hook->apply_filters, Astra_Builder_Header->render_column, Astra_Builder_Helper::render_builder_markup, get_template_part, locate_template, load_template, require('/themes/astra/template-parts/header/builder/components.php'), do_action('astra_header_menu_1'), WP_Hook->do_action, WP_Hook->apply_filters, Astra_Builder_Header->__call, Astra_Header_Menu_Component::menu_markup, wp_page_menu, wp_list_pages, get_pages, WP_Query->query, WP_Query->get_posts
+[21-May-2024 06:40:50 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:40:51 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:40:53 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:41:05 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:41:08 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:12 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:41:14 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:18 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:41:19 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:23 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:41:25 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:29 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:41:30 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:30 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:30 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:34 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:41:35 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:39 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:41:40 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:40 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:40 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:44 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:41:45 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:45 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:49 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:41:50 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:50 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:50 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:54 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:41:55 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:41:59 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:42:04 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 06:42:06 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:42:06 UTC] PHP Notice:  Function wpdb was called incorrectly. wpdb must set a database connection for use with escaping. Please see <a>Debugging in WordPress</a> for more information. (This message was added in version 3.6.0.) in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[21-May-2024 06:42:10 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /var/www/html/wordpress/wp-includes/class-wpdb.php on line 1987
+[21-May-2024 14:40:57 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[21-May-2024 14:48:59 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[21-May-2024 14:48:59 UTC] Cron unschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[21-May-2024 14:50:41 UTC] PHP Warning:  Undefined array key "size" in /var/www/html/wordpress/wp-content/plugins/elementor/includes/elements/container.php on line 1831
+[21-May-2024 14:50:41 UTC] PHP Warning:  Undefined array key "size" in /var/www/html/wordpress/wp-content/plugins/elementor/includes/elements/container.php on line 1831
+[21-May-2024 14:50:41 UTC] PHP Warning:  Undefined array key "size" in /var/www/html/wordpress/wp-content/plugins/elementor/includes/elements/container.php on line 1831
+[21-May-2024 14:50:46 UTC] PHP Warning:  Undefined array key "size" in /var/www/html/wordpress/wp-content/plugins/elementor/includes/elements/container.php on line 1831
+[21-May-2024 14:50:46 UTC] PHP Warning:  Undefined array key "size" in /var/www/html/wordpress/wp-content/plugins/elementor/includes/elements/container.php on line 1831
+[21-May-2024 14:50:46 UTC] PHP Warning:  Undefined array key "size" in /var/www/html/wordpress/wp-content/plugins/elementor/includes/elements/container.php on line 1831
+[21-May-2024 14:50:46 UTC] PHP Warning:  Undefined array key "size" in /var/www/html/wordpress/wp-content/plugins/elementor/includes/elements/container.php on line 1831
+[21-May-2024 14:50:46 UTC] PHP Warning:  Undefined array key "size" in /var/www/html/wordpress/wp-content/plugins/elementor/includes/elements/container.php on line 1831
+[21-May-2024 14:50:46 UTC] PHP Warning:  Undefined array key "size" in /var/www/html/wordpress/wp-content/plugins/elementor/includes/elements/container.php on line 1831
+[21-May-2024 14:50:46 UTC] PHP Warning:  Undefined array key "size" in /var/www/html/wordpress/wp-content/plugins/elementor/includes/elements/container.php on line 1831
+[21-May-2024 14:50:46 UTC] PHP Warning:  Undefined array key "size" in /var/www/html/wordpress/wp-content/plugins/elementor/includes/elements/container.php on line 1831
+[21-May-2024 14:50:46 UTC] PHP Warning:  Undefined array key "size" in /var/www/html/wordpress/wp-content/plugins/elementor/includes/elements/container.php on line 1831
+[21-May-2024 14:54:00 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 02:18:32 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 02:18:34 UTC] Cron unschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 02:19:25 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 02:19:29 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 02:42:33 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 02:42:35 UTC] Cron unschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 03:02:17 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 03:02:17 UTC] Cron unschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 03:05:26 UTC] PHP Deprecated:  Function print_emoji_styles is deprecated since version 6.4.0! Use wp_enqueue_emoji_styles instead. in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[22-May-2024 03:05:29 UTC] PHP Deprecated:  Function print_emoji_styles is deprecated since version 6.4.0! Use wp_enqueue_emoji_styles instead. in /var/www/html/wordpress/wp-includes/functions.php on line 6078
+[22-May-2024 08:16:13 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 08:16:19 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 09:29:19 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 09:29:20 UTC] Cron unschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 09:40:42 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in /var/www/html/wordpress/wp-includes/general-template.php on line 1425
+[22-May-2024 09:43:23 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in /var/www/html/wordpress/wp-includes/general-template.php on line 1425
+[22-May-2024 09:46:13 UTC] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in /var/www/html/wordpress/wp-includes/general-template.php on line 1425
+[22-May-2024 10:05:39 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 10:30:49 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 12:15:04 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 12:15:05 UTC] Cron unschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 13:55:32 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 13:55:32 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[22-May-2024 13:55:33 UTC] Cron unschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[23-May-2024 00:39:31 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[23-May-2024 00:40:04 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[23-May-2024 04:55:41 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[23-May-2024 04:55:41 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[23-May-2024 04:55:44 UTC] Cron unschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[23-May-2024 04:55:47 UTC] Cron reschedule event error for hook: wp_privacy_delete_old_export_files, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"hourly","args":[],"interval":3600}
+[23-May-2024 04:55:51 UTC] Cron unschedule event error for hook: wp_privacy_delete_old_export_files, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"hourly","args":[],"interval":3600}
+[23-May-2024 04:56:53 UTC] Cron reschedule event error for hook: wp_scheduled_delete, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"daily","args":[],"interval":86400}
+[23-May-2024 04:56:53 UTC] Cron reschedule event error for hook: wp_scheduled_delete, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"daily","args":[],"interval":86400}
+[23-May-2024 04:56:57 UTC] Cron unschedule event error for hook: wp_scheduled_delete, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"daily","args":[],"interval":86400}
+[23-May-2024 04:57:00 UTC] Cron reschedule event error for hook: delete_expired_transients, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"daily","args":[],"interval":86400}
+[23-May-2024 04:57:04 UTC] Cron reschedule event error for hook: wp_privacy_delete_old_export_files, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"hourly","args":[],"interval":3600}
+[28-May-2024 08:34:07 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[28-May-2024 09:57:40 UTC] PHP Warning:  Undefined array key "alumni_register_nonce" in /var/www/html/wordpress/wp-content/themes/astra-child/functions.php on line 13
+[28-May-2024 09:58:20 UTC] PHP Warning:  Undefined array key "alumni_register_nonce" in /var/www/html/wordpress/wp-content/themes/astra-child/functions.php on line 13
+[28-May-2024 09:58:24 UTC] PHP Warning:  Undefined array key "alumni_register_nonce" in /var/www/html/wordpress/wp-content/themes/astra-child/functions.php on line 13
+[28-May-2024 10:04:04 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[28-May-2024 10:04:44 UTC] PHP Warning:  Undefined array key "alumni_register_nonce" in /var/www/html/wordpress/wp-content/themes/astra-child/functions.php on line 13
+[28-May-2024 10:04:59 UTC] PHP Warning:  Undefined array key "alumni_register_nonce" in /var/www/html/wordpress/wp-content/themes/astra-child/functions.php on line 13
+[28-May-2024 10:05:04 UTC] PHP Warning:  Undefined array key "alumni_register_nonce" in /var/www/html/wordpress/wp-content/themes/astra-child/functions.php on line 13
+[28-May-2024 10:05:16 UTC] PHP Warning:  Undefined array key "alumni_register_nonce" in /var/www/html/wordpress/wp-content/themes/astra-child/functions.php on line 13
+[28-May-2024 10:05:18 UTC] PHP Warning:  Undefined array key "alumni_register_nonce" in /var/www/html/wordpress/wp-content/themes/astra-child/functions.php on line 13
+[28-May-2024 10:05:37 UTC] PHP Warning:  Undefined array key "alumni_register_nonce" in /var/www/html/wordpress/wp-content/themes/astra-child/functions.php on line 13
+[29-May-2024 05:05:10 UTC] Cron reschedule event error for hook: jetpack_clean_nonces, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"hourly","args":[],"interval":3600}
+[29-May-2024 05:05:11 UTC] Cron unschedule event error for hook: jetpack_clean_nonces, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"hourly","args":[],"interval":3600}
+[29-May-2024 05:07:08 UTC] Cron reschedule event error for hook: jetpack_clean_nonces, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"hourly","args":[],"interval":3600}
+[29-May-2024 05:53:28 UTC] WordPress database error Deadlock found when trying to get lock; try restarting transaction for query UPDATE wp_actionscheduler_actions SET claim_id=1195, last_attempt_gmt='2024-05-29 05:53:26', last_attempt_local='2024-05-29 08:53:26' WHERE claim_id = 0 AND scheduled_date_gmt <= '2024-05-29 05:53:26' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions
+[29-May-2024 05:53:28 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: Deadlock found when trying to get lock; try restarting transaction. in /var/www/html/wordpress/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:942
+Stack trace:
+#0 /var/www/html/wordpress/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(799): ActionScheduler_DBStore->claim_actions()
+#1 /var/www/html/wordpress/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(160): ActionScheduler_DBStore->stake_claim()
+#2 /var/www/html/wordpress/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(139): ActionScheduler_QueueRunner->do_batch()
+#3 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): ActionScheduler_QueueRunner->run()
+#4 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#5 /var/www/html/wordpress/wp-includes/plugin.php(565): WP_Hook->do_action()
+#6 /var/www/html/wordpress/wp-cron.php(191): do_action_ref_array()
+#7 {main}
+  thrown in /var/www/html/wordpress/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 942

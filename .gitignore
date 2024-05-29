@@ -1,0 +1,31 @@
+# WordPress Core
+/wp-admin/
+/wp-includes/
+
+# Configuration File
+wp-config.php
+
+# Uploads
+wp-content/uploads/
+
+# Plugins and Themes (if managed separately)
+# wp-content/plugins/
+# wp-content/themes/
+
+# Environment Files
+.env
+.env.local
+
+# Backup and Temporary Files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# IDE Specific Files
+.vscode/
+.idea/
+
+# Node and Composer Dependencies
+node_modules/
+vendor/

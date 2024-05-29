@@ -1,0 +1,37 @@
+
+// add_action( 'wp_enqueue_scripts', 'enqueue_todo_list_styles' );
+
+//  function create_to_do_post_type() {
+//     $labels = array(
+//         'name'               => __( 'To-Do Items', 'humphreychildtheme' ),
+//         'singular_name'      => __( 'To-Do Item', 'humphreychildtheme' ),
+//         'add_new'            => __( 'Add New', 'humphreychildtheme' ),
+//         'add_new_item'       => __( 'Add New To-Do Item', 'humphreychildtheme' ),
+//         'edit_item'          => __( 'Edit To-Do Item', 'humphreychildtheme' ),
+//         'new_item'           => __( 'New To-Do Item', 'humphreychildtheme' ),
+//         'all_items'          => __( 'All To-Do Items', 'humphreychildtheme' ),
+//         'view_item'          => __( 'View To-Do Item', 'humphreychildtheme' ),
+//         'search_items'       => __( 'Search To-Do Items', 'humphreychildtheme' ),
+//         'not_found'          => __( 'No to-do items found', 'humphreychildtheme' ),
+//         'not_found_in_trash' => __( 'No to-do items found in Trash', 'humphreychildtheme' ),
+//         'menu_name'          => __( 'To-Do Items', 'humphreychildtheme' ),
+//     );
+
+//     $args = array(
+//         'labels'             => $labels,
+//         'public'             => true,
+//         'publicly_queryable' => true,
+//         'show_ui'            => true,
+//         'show_in_menu'       => true,
+//         'query_var'          => true,
+//         'rewrite'            => array( 'slug' => 'to-do' ),
+//         'capability_type'    => 'post',
+//         'has_archive'        => true,
+//         'hierarchical'       => false,
+//         'menu_position'      => null,
+//         'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+//     );
+
+//     register_post_type( 'to-do', $args );
+// }
+// add_action( 'init', 'create_to_do_post_type' );
