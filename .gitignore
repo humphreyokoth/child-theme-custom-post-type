@@ -11,7 +11,7 @@ wp-content/uploads/
 # Plugins and Themes (if managed separately)
 # wp-content/plugins/
 # wp-content/themes/
-
+wp-content/plugins/mailpoet/
 # Environment Files
 .env
 .env.local
