@@ -87,7 +87,8 @@ $table_prefix = 'wp_';
 
 // Enable Debug logging to the /wp-content/debug.log file
 define('WP_DEBUG_LOG', true);
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 // Disable display of errors and warnings on the site
 define('WP_DEBUG_DISPLAY', false);
 @ini_set('display_errors', 0);
@@ -99,7 +100,7 @@ define( 'WP_DEBUG', true );
 /* Add any custom values between this line and the "stop editing" line. */
 
 define('FS_METHOD', 'direct');
-
+define('DISABLE_WP_CRON', true);
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */

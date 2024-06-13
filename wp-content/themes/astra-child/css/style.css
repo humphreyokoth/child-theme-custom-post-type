@@ -1,35 +1,35 @@
 /* Main Content Styles */
 .main-content {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    /* background-color: #f7f7f7; */
-    max-width: 1200px; 
-    margin: 0 auto;
-    flex-wrap: wrap; 
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  /* background-color: #f7f7f7; */
+  max-width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 /* Form Container Styles */
 .alumni-register-form {
-    flex: 1 1 65%; 
-    padding: 20px;
-    /* background-color: #ffffff;
+  flex: 1 1 65%;
+  padding: 20px;
+  /* background-color: #ffffff;
     border: 1px solid #ddd; */
-    border-radius: 5px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    font-family: Arial, sans-serif;
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  font-family: Arial, sans-serif;
 }
 
 .alumni-register-form h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .alumni-register-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .alumni-register-form input[type="text"],
@@ -38,154 +38,43 @@
 .alumni-register-form input[type="tel"],
 .alumni-register-form select,
 .alumni-register-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .alumni-register-form input[type="submit"],
 .alumni-register-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .alumni-register-form input[type="submit"]:hover,
 .alumni-register-form button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Inline Field Styles */
 .period-at-smack {
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-    flex-wrap: wrap; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .period-at-smack label {
-    margin-bottom: 0;
-    width: auto;
-    /* flex: 0; */
+  margin-bottom: 0;
+  width: auto;
+  /* flex: 0; */
 }
 
 .period-at-smack input[type="date"] {
-    width: auto;
-    flex: 1;
-}
-
-/* Right Container Styles */
-
-#right-container {
-    width: 30%;
-    margin-left: 5%;
-    float: right;
-    background-color: #ffffff;
-    /* border: 1px solid #ddd; */
-    /* border-radius: 5px; */
-    padding: 20px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    margin-bottom: 20px;
-}
-.ad-space,
-.subscribe-container {
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.ad-space h3,
-.subscribe-container h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-}
-
-/* Background Overlay Styles */
-.ad-space {
-    /* background: url('path-to-ad-background-image.jpg') no-repeat center center / cover; */
-    color: #fff;
-    text-align: center;
-    height: 400px;
-    width: 400px;
-    margin: 20px;
-}
-
-.ad-space h3,
-.subscribe-container h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    text-align: center; /* Add this line to center the text */
-}
-.subscribe-container {
-    /* background: url('path-to-subscribe-background-image.jpg') no-repeat center center / cover; */
-    color: #fff;
-    text-align: center;
-    /* height: 200px; */
-    width: 400px;
-    margin: 20px;
-}
-
-.ad-space img,
-.subscribe-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-/* Subscribe Container Styles */
-.subscribe-container input[type="email"] {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.subscribe-container input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.subscribe-container input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-
-/* Styling of the custom card in the shop page */
-.shop-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-}
-
-.woocommerce-products-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.woocommerce-products-header__title {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #333;
-}
-body {
-    background-color: yellow;
+  width: auto;
+  flex: 1;
 }

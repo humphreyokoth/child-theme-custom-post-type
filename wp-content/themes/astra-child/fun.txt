@@ -35,3 +35,647 @@
 //     register_post_type( 'to-do', $args );
 // }
 // add_action( 'init', 'create_to_do_post_type' );
+
+
+<?php
+/*
+Template Name: Alumni Register
+*/
+get_header();
+?>
+
+<div class="main-content">
+    <?php the_content(); ?>
+    <form method="post" class="alumni-register-form"action="<?php echo esc_url( admin_url('admin-post.php') ); ?>">
+    <input type="hidden" name="action" value="register_alumni">
+        <h2>Alumni Register</h2>
+        <label> First Name
+            <input type="text" name="first-name" autocomplete="first-name" required>
+        </label>
+        <label> Middle Name
+            <input type="text" name="middle-name" autocomplete="first-name" required>
+        </label>
+        <label> Last Name
+            <input type="text" name="last-name" required>
+        </label>
+        <label> Date of Birth
+            <input type="date" name="date-of-birth" required>
+        </label>
+        <label> Marital status
+            <select name="marital-status" required>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Widowed">Widowed</option>
+            </select>
+        </label>
+        <div class="period-at-smack">
+            <label for="start-date">Period at SMACK. From:</label>
+            <input type="date" name="start-date" id="start-date" required>
+            <label for="end-date">to:</label>
+            <input type="date" name="end-date" id="end-date" required>
+        </div>
+        <label> House of Residence
+            <select name="house-of-residence" required>
+                <option value="">Select house</option>
+                <option value="Lourdel">Lourdel</option>
+                <option value="Mugwanya">Mugwanya</option>
+                <option value="Kiwanuka">Kiwanuka</option>
+                <option value="Kakooza">Kakooza</option>
+            </select>
+        </label>
+        <label> Profession
+            <select name="profession" required>
+                <option value="">Select profession</option>
+                <option value="Business & Finance">Business & Finance</option>
+                <option value="Computers & Technology">Computers & Technology</option>
+                <option value="Construction Trades">Construction Trades</option>
+                <option value="Education">Education</option>
+                <option value="Teaching & Training">Teaching & Training</option>
+                <option value="Engineering & Engineering Technicians">Engineering & Engineering Technicians</option>
+                <option value="Fishing">Fishing</option>
+                <option value="Farming & Forestry">Farming & Forestry</option>
+                <option value="Health & Medical">Health & Medical</option>
+                <option value="Hospitality">Hospitality</option>
+                <option value="Travel & Tourism">Travel & Tourism</option>
+                <option value="Legal Criminal Justice & Law Enforcement">Legal Criminal Justice & Law Enforcement</option>
+                <option value="Management">Management</option>
+                <option value="Media Communications & Broadcasting">Media Communications & Broadcasting</option>
+                <option value="Military & Armed Forces">Military & Armed Forces</option>
+                <option value="Office Administration & Management">Office Administration & Management</option>
+                <option value="Production & Manufacturing">Production & Manufacturing</option>
+                <option value="Professional & Service">Professional & Service</option>
+                <option value="Psychology & Counselling">Psychology & Counselling</option>
+                <option value="Installation">Installation</option>
+                <option value="Repair & Maintenance">Repair & Maintenance</option>
+                <option value="Sales & Marketing">Sales & Marketing</option>
+                <option value="Transportation & Moving">Transportation & Moving</option>
+            </select>
+        </label>
+        <label> Telephone Number
+            <input type="tel" name="telephone-number" required>
+        </label>
+        <label> Your email
+            <input type="email" name="your-email" autocomplete="email" required>
+        </label>
+        <label> Expectations of SMACKOBA
+            <textarea name="expectations" required></textarea>
+        </label>
+        <label> Subject
+            <input type="text" name="your-subject" required>
+        </label>
+        <label> Your message (optional)
+            <textarea name="your-message"></textarea>
+        </label>
+        <label>
+            <input type="checkbox" name="is-parent"> Parent at SMACK?
+        </label>
+        <label>
+            <input type="checkbox" name="receive-communication"> Receive communication from SMACKOBA?
+        </label>
+        <button type="submit">Register</button>
+    </form>
+
+   
+
+<?php get_footer(); ?>
+
+
+
+
+
+
+// /**
+//  * Extract submission data from Contact Form 7 submission.
+//  *
+//  * @param WPCF7_Submission $submission The Contact Form 7 submission instance.
+//  * @return array The sanitized user data.
+//  */
+// function extract_submission_data($submission)
+// {
+//     if ($submission) {
+//         $data = $submission->get_posted_data();
+//         return [
+//             'first_name' => sanitize_text_field($data['first-name']),
+//             'middle_name' => sanitize_text_field($data['middle-name']),
+//             'last_name' => sanitize_text_field($data['last-name']),
+//             'date_of_birth' => sanitize_text_field($data['date-of-birth']),
+//             'marital_status' => sanitize_text_field($data['marital-status']),
+//             'start_date' => sanitize_text_field($data['start-date']),
+//             'end_date' => isset($data['end-date']) ? sanitize_text_field($data['end-date']) : '',
+//             'house_of_residence' => sanitize_text_field($data['house-of-residence']),
+//             'profession' => sanitize_text_field($data['profession']),
+//             'telephone_number' => sanitize_text_field($data['telephone-number']),
+//             'email' => sanitize_email($data['your-email']),
+//             'expectations' => sanitize_textarea_field($data['expectations']),
+//             'subject' => sanitize_text_field($data['your-subject']),
+//             'message' => sanitize_textarea_field($data['your-message']),
+//             'is_parent' => isset($data['is-parent']) ? 1 : 0,
+//             'receive_communication' => isset($data['receive-communication']) ? 1 : 0
+//         ];
+//     }
+//     return [];
+// }
+
+// /**
+//  * Create a new user and save user meta data.
+//  *
+//  * @param array $user_data The user data to save.
+//  * @return int|null The user ID on success, null on failure.
+//  */
+// function create_alumni_user($user_data)
+// {
+//     $username = strtolower($user_data['first_name']) . '.' . strtolower($user_data['last_name']);
+//     $password = wp_generate_password();
+
+//     if (username_exists($username) || email_exists($user_data['email'])) {
+//         error_log('Username or email already exists.');
+//         return null;
+//     }
+
+//     $user_id = wp_create_user($username, $password, $user_data['email']);
+//     if (is_wp_error($user_id)) {
+//         error_log('User creation failed: ' . $user_id->get_error_message());
+//         return null;
+//     }
+
+//     $user_meta_fields = [
+//         'first_name' => $user_data['first_name'],
+//         'middle_name' => $user_data['middle_name'],
+//         'last_name' => $user_data['last_name'],
+//         'date_of_birth' => $user_data['date_of_birth'],
+//         'marital_status' => $user_data['marital_status'],
+//         'start_date' => $user_data['start_date'],
+//         'end_date' => $user_data['end_date'],
+//         'house_of_residence' => $user_data['house_of_residence'],
+//         'profession' => $user_data['profession'],
+//         'telephone_number' => $user_data['telephone_number'],
+//         'expectations' => $user_data['expectations'],
+//         'subject' => $user_data['subject'],
+//         'message' => $user_data['message'],
+//         'is_parent' => $user_data['is_parent'],
+//         'receive_communication' => $user_data['receive_communication']
+//     ];
+
+//     foreach ($user_meta_fields as $meta_key => $meta_value) {
+//         update_user_meta($user_id, $meta_key, $meta_value);
+//     }
+
+//     // wp_mail(
+//     //     $user_data['email'],
+//     //     'Your Account Info',
+//     //     'Username: ' . $username . ' Password: ' . $password
+//     // );
+
+//     do_action('user_register', $user_id);
+//     return $user_id;
+// }
+
+// /**
+//  * Handle Contact Form 7 submission and register user.
+//  *
+//  * @param WPCF7_ContactForm $contact_form The Contact Form 7 object.
+//  */
+// function register_alumni_user($contact_form)
+// {
+//     if ($contact_form->id() == 'fc95790') {
+//         $submission = WPCF7_Submission::get_instance();
+//         $user_data = extract_submission_data($submission);
+
+//         // Debugging output
+//         error_log('Submission Data: ' . print_r($user_data, true));
+
+//         if (!empty($user_data)) {
+//             $user_id = create_alumni_user($user_data);
+//             if ($user_id) {
+//                 error_log('User created successfully with ID: ' . $user_id);
+//             } else {
+//                 error_log('User creation failed.');
+//             }
+//         }
+//     }
+// }
+// // add_action('register_alumni_user');//'wpcf7_before_send_mail', 
+
+// /**
+//  * Hook into user_register to log and perform additional actions.
+//  *
+//  * @param int $user_id The ID of the newly registered user.
+//  */
+// function after_user_register($user_id)
+// {
+//     error_log('user_register hook triggered for user ID: ' . $user_id);
+// }
+// add_action('user_register', 'after_user_register', 10, 1);
+
+// /**
+//  * Add Alumni role
+//  */
+// function add_alumni_role()
+// {
+//     add_role(
+//         'alumni',
+//         __('Alumni'),
+//         array(
+//             'read' => true,
+//             'edit_posts' => false,
+//             'delete_posts' => false,
+//         )
+//     );
+// }
+// add_action('init', 'add_alumni_role');
+
+// /**
+//  * Show custom user profile fields
+//  *
+//  * @param WP_User $user The current user object.
+//  */
+// function show_custom_user_profile_fields($user)
+// {
+// ?>
+<!-- //     <h3><=?php _e('Custom User Fields', 'textdomain'); ?></h3>
+//     <table class="form-table">
+//         <tr>
+//             <th><label for="middle_name"><=?php _e('Middle Name', 'textdomain'); ?></label></th>
+//             <td>
+//                 <input type="text" name="middle_name" id="middle_name" value="<=?php echo esc_attr(get_the_author_meta('middle_name', $user->ID)); ?>" class="regular-text" /><br />
+//                 <span class="description"><=?php _e('Please enter your middle name.', 'textdomain'); ?></span>
+//             </td>
+//         </tr>
+//         <tr>
+//             <th><label for="date_of_birth"><=?php _e('Date of Birth', 'textdomain'); ?></label></th>
+//             <td>
+//                 <input type="date" name="date_of_birth" id="date_of_birth" value="<=?php echo esc_attr(get_the_author_meta('date_of_birth', $user->ID)); ?>" class="regular-text" /><br />
+//                 <span class="description"><=?php _e('Please enter your date of birth.', 'textdomain'); ?></span>
+//             </td>
+//         </tr>
+//         <tr>
+//             <th><label for="marital_status"><=?php _e('Marital Status', 'textdomain'); ?></label></th>
+//             <td>
+//                 <input type="text" name="marital_status" id="marital_status" value="<=?php echo esc_attr(get_the_author_meta('marital_status', $user->ID)); ?>" class="regular-text" /><br />
+//                 <span class="description"><=?php _e('Please enter your marital status.', 'textdomain'); ?></span>
+//             </td>
+//         </tr>
+//         <tr>
+//             <th><label for="is_parent"><=?php _e('Is Parent', 'textdomain'); ?></label></th>
+//             <td>
+//                 <input type="checkbox" name="is_parent" id="is_parent" <=?php checked(get_the_author_meta('is_parent', $user->ID), 1); ?> value="1" /><br />
+//                 <span class="description"><=?php _e('Check if you are a parent at SMACK.', 'textdomain'); ?></span>
+//             </td>
+//         </tr>
+//         <tr>
+//             <th><label for="receive_communication"><=?php _e('Receive Communication', 'textdomain'); ?></label></th>
+//             <td>
+//                 <input type="checkbox" name="receive_communication" id="receive_communication" <=?php checked(get_the_author_meta('receive_communication', $user->ID), 1); ?> value="1" /><br />
+//                 <span class="description"><=?php _e('Check if you want to receive communication from SMACKOBA.', 'textdomain'); ?></span>
+//             </td>
+//         </tr>
+//         <tr>
+//             <th><label for="start_date"><=?php _e('Start Date at SMACK', 'textdomain'); ?></label></th>
+//             <td>
+//                 <input type="date" name="start_date" id="start_date" value="<=?php echo esc_attr(get_the_author_meta('start_date', $user->ID)); ?>" class="regular-text" /><br />
+//                 <span class="description"><==?php _e('Please enter your start date at SMACK.', 'textdomain'); ?></span>
+//             </td>
+//         </tr>
+//         <tr>
+//             <th><label for="end_date"><=?php _e('End Date at SMACK', 'textdomain'); ?></label></th>
+//             <td>
+//                 <input type="date" name="end_date" id="end_date" value="<=?php echo esc_attr(get_the_author_meta('end_date', $user->ID)); ?>" class="regular-text" /><br />
+//                 <span class="description"><=?php _e('Please enter your end date at SMACK.', 'textdomain'); ?></span>
+//             </td>
+//         </tr>
+//         <tr>
+//             <th><label for="house_of_residence"><=?php _e('House of Residence', 'textdomain'); ?></label></th>
+//             <td>
+//                 <input type="text" name="house_of_residence" id="house_of_residence" value="<=?php echo esc_attr(get_the_author_meta('house_of_residence', $user->ID)); ?>" class="regular-text" /><br />
+//                 <span class="description"><=?php _e('Please enter your house of residence at SMACK.', 'textdomain'); ?></span>
+//             </td>
+//         </tr>
+//         <tr>
+//             <th><label for="profession"><=?php _e('Profession', 'textdomain'); ?></label></th>
+//             <td>
+//                 <input type="text" name="profession" id="profession" value="<=?php echo esc_attr(get_the_author_meta('profession', $user->ID)); ?>" class="regular-text" /><br />
+//                 <span class="description"><=?php _e('Please enter your profession.', 'textdomain'); ?></span>
+//             </td>
+//         </tr>
+//         <tr>
+//             <th><label for="telephone_number"><=?php _e('Telephone Number', 'textdomain'); ?></label></th>
+//             <td>
+//                 <input type="text" name="telephone_number" id="telephone_number" value="<=?php echo esc_attr(get_the_author_meta('telephone_number', $user->ID)); ?>" class="regular-text" /><br />
+//                 <span class="description"><=?php _e('Please enter your telephone number.', 'textdomain'); ?></span>
+//             </td>
+//         </tr>
+//         <tr>
+//             <th><label for="expectations"><=?php _e('Expectations of SMACKOBA', 'textdomain'); ?></label></th>
+//             <td>
+//                 <textarea name="expectations" id="expectations" class="regular-text"><=?php echo esc_attr(get_the_author_meta('expectations', $user->ID)); ?></textarea><br />
+//                 <span class="description"><=?php _e('Please enter your expectations of SMACKOBA.', 'textdomain'); ?></span>
+//             </td>
+//         </tr>
+//         <tr>
+//             <th><label for="subject"><=?php _e('Subject', 'textdomain'); ?></label></th>
+//             <td>
+//                 <input type="text" name="subject" id="subject" value="<=?php echo esc_attr(get_the_author_meta('subject', $user->ID)); ?>" class="regular-text" /><br />
+//                 <span class="description"><=?php _e('Please enter the subject.', 'textdomain'); ?></span>
+//             </td>
+//         </tr>
+//         <tr>
+//             <th><label for="message"><=?php _e('Message', 'textdomain'); ?></label></th>
+//             <td>
+//                 <textarea name="message" id="message" class="regular-text"><=?php echo esc_attr(get_the_author_meta('message', $user->ID)); ?></textarea><br />
+//                 <span class="description"><=?php _e('Please enter your message.', 'textdomain'); ?></span>
+//             </td>
+//         </tr>
+//     </table>
+// <=?php
+// }
+// add_action('show_user_profile', 'show_custom_user_profile_fields');
+// add_action('edit_user_profile', 'show_custom_user_profile_fields');
+
+// /**
+//  * Save custom user profile fields
+//  *
+//  * @param int $user_id The ID of the user being saved.
+//  */
+// function save_custom_user_profile_fields($user_id)
+// {
+//     if (!current_user_can('edit_user', $user_id)) {
+//         return false;
+//     }
+
+//     $fields = [
+//         'middle_name',
+//         'date_of_birth',
+//         'marital_status',
+//         'start_date',
+//         'end_date',
+//         'house_of_residence',
+//         'profession',
+//         'telephone_number',
+//         'expectations',
+//         'subject',
+//         'message'
+//     ];
+
+//     foreach ($fields as $field) {
+//         if (isset($_POST[$field])) {
+//             update_user_meta($user_id, $field, sanitize_text_field($_POST[$field]));
+//         }
+//     }
+
+//     update_user_meta($user_id, 'is_parent', isset($_POST['is_parent']) ? 1 : 0);
+//     update_user_meta($user_id, 'receive_communication', isset($_POST['receive_communication']) ? 1 : 0);
+// }
+// add_action('personal_options_update', 'save_custom_user_profile_fields');
+// add_action('edit_user_profile_update', 'save_custom_user_profile_fields');
+
+
+// /**
+//  * Extract submission data from Contact Form 7 submission.
+//  *
+//  * @param WPCF7_Submission $submission The Contact Form 7 submission instance.
+//  * @return array The sanitized user data.
+//  */
+// function extract_submission_data($submission) {
+//     if ($submission) {
+//         $data = $submission->get_posted_data();
+//         return [
+//             'first_name' => sanitize_text_field($data['first-name']),
+//             'middle_name' => sanitize_text_field($data['middle-name']),
+//             'last_name' => sanitize_text_field($data['last-name']),
+//             'date_of_birth' => sanitize_text_field($data['date-of-birth']),
+//             'marital_status' => sanitize_text_field($data['marital-status']),
+//             'start_date' => sanitize_text_field($data['start-date']),
+//             'end_date' => sanitize_text_field($data['end-date']),
+//             'house_of_residence' => sanitize_text_field($data['house-of-residence']),
+//             'profession' => sanitize_text_field($data['profession']),
+//             'email' => sanitize_email($data['your-email']),
+//             'expectations' => sanitize_textarea_field($data['expectations']),
+//             'subject' => sanitize_text_field($data['your-subject']),
+//             'message' => sanitize_textarea_field($data['your-message']),
+//             'is_parent' => isset($data['is-parent']) ? 1 : 0,
+//             'receive_communication' => isset($data['receive-communication']) ? 1 : 0
+//         ];
+//     }
+//     return [];
+// }
+
+// /**
+//  * Create a new user and save user meta data.
+//  *
+//  * @param array $user_data The user data to save.
+//  * @return int|null The user ID on success, null on failure.
+//  */
+// function create_alumni_user($user_data) {
+//     // Generate username and password
+//     $username = strtolower($user_data['first_name']) . '.' . strtolower($user_data['last_name']);
+//     $password = wp_generate_password();
+
+//     // Check if the username or email already exists
+//     if (username_exists($username) || email_exists($user_data['email'])) {
+//         return null;
+//     }
+
+//     // Create the user
+//     $user_id = wp_create_user($username, $password, $user_data['email']);
+//     if (is_wp_error($user_id)) {
+//         return null;
+//     }
+
+//     // Define user meta fields
+//     $user_meta_fields = [
+//         'first_name' => $user_data['first_name'],
+//         'middle_name' => $user_data['middle_name'],
+//         'last_name' => $user_data['last_name'],
+//         'date_of_birth' => $user_data['date_of_birth'],
+//         'marital_status' => $user_data['marital_status'],
+//         'start_date' => $user_data['start_date'],
+//         'end_date' => $user_data['end_date'],
+//         'house_of_residence' => $user_data['house_of_residence'],
+//         'profession' => $user_data['profession'],
+//         'expectations' => $user_data['expectations'],
+//         'subject' => $user_data['subject'],
+//         'message' => $user_data['message'],
+//         'is_parent' => $user_data['is_parent'],
+//         'receive_communication' => $user_data['receive_communication']
+//     ];
+
+//     // Update user meta data
+//     foreach ($user_meta_fields as $meta_key => $meta_value) {
+//         update_user_meta($user_id, $meta_key, $meta_value);
+//     }
+
+//     // Send an email with username and password
+//     wp_mail(
+//         $user_data['email'],
+//         'Your Account Info',
+//         'Username: ' . $username . ' Password: ' . $password
+//     );
+
+//     // Trigger the user_register hook
+//     do_action('user_register', $user_id);
+//     return $user_id;
+// }
+
+// /**
+//  * Handle Contact Form 7 submission and register user.
+//  *
+//  * @param WPCF7_ContactForm $contact_form The Contact Form 7 object.
+//  */
+// function register_alumni_user($contact_form) {
+//     if ($contact_form->id() == '4ddcf97') {  
+//         $submission = WPCF7_Submission::get_instance();
+//         $user_data = extract_submission_data($submission);
+
+//         if (!empty($user_data)) {
+//             create_alumni_user($user_data);
+//         }
+//     }
+// }
+// add_action('wpcf7_before_send_mail', 'register_alumni_user');
+
+
+
+// /**
+//  * Hook into user_register to log and perform additional actions.
+//  *
+//  * @param int $user_id The ID of the newly registered user.
+//  */
+// function after_user_register($user_id) {
+//     error_log('user_register hook triggered for user ID: ' . $user_id);
+// }
+// add_action('user_register', 'after_user_register', 10, 1);
+
+// function add_alumni_role() {
+//     add_role(
+//         'alumni',
+//         __( 'Alumni' ),
+//         array(
+//             'read' => true, // True allows this capability
+//             'edit_posts' => false,
+//             'delete_posts' => false,
+//         )
+//     );
+// }
+// add_action('init', 'add_alumni_role');
+// Get submitted data
+// function extract_submission_data($submission) {
+//     if ($submission) {
+//         $data = $submission->get_posted_data();
+//         return [
+//             'first_name' => sanitize_text_field($data['first-name']),
+//             'middle_name' => sanitize_text_field($data['middle-name']),
+//             'last_name' => sanitize_text_field($data['last-name']),
+//             'date_of_birth' => sanitize_text_field($data['date-of-birth']),
+//             'marital_status' => sanitize_text_field($data['marital-status']),
+//             'start_date' => sanitize_text_field($data['start-date']),
+//             'end_date' => sanitize_text_field($data['end-date']),
+//             'house_of_residence' => sanitize_text_field($data['house-of-residence']),
+//             'profession' => sanitize_text_field($data['profession']),
+//             'email' => sanitize_email($data['your-email']),
+//             'expectations' => sanitize_textarea_field($data['expectations']),
+//             'subject' => sanitize_text_field($data['your-subject']),
+//             'message' => sanitize_textarea_field($data['your-message']),
+//             'is_parent' => isset($data['is-parent']) ? 1 : 0,
+//             'receive_communication' => isset($data['receive-communication']) ? 1 : 0
+//         ];
+//     }
+//     return [];
+// }
+
+// // Hook into Contact Form 7 submission
+// add_action('wpcf7_mail_sent', 'register_alumni_user');
+
+// function register_alumni_user($contact_form) {
+//     if ($contact_form->id() == 'fc95790') {  // Ensure this is your correct form ID
+//         error_log('Form ID matched. Processing submission.');
+
+//         $submission = WPCF7_Submission::get_instance();
+//         if ($submission) {
+//             $user_data = extract_submission_data($submission);
+//             error_log('Extracted user data: ' . print_r($user_data, true));
+
+//             if (!empty($user_data)) {
+//                 // Attempt to create the user
+//                 $username = strtolower($user_data['first_name']) . '.' . strtolower($user_data['last_name']);
+//                 $password = wp_generate_password();
+//                 $user_id = wp_create_user($username, $password, $user_data['email']);
+
+//                 if (is_wp_error($user_id)) {
+//                     error_log('User registration failed: ' . $user_id->get_error_message());
+//                 } else {
+//                     error_log('User registered successfully with ID: ' . $user_id);
+//                     // Save the user data as user meta
+//                     save_user_meta_data($user_id, $user_data);
+//                 }
+//             } else {
+//                 error_log('No user data extracted from the submission.');
+//             }
+//         } else {
+//             error_log('No submission instance found.');
+//         }
+//     } else {
+//         error_log('Form ID did not match.');
+//     }
+// }
+
+//function register_alumni_user($contact_form) {
+//     if ($contact_form->id() == 'fc95790') {  // Ensure this is your correct form ID
+//         $submission = WPCF7_Submission::get_instance();
+//         $user_data = extract_submission_data($submission);
+
+//         if (!empty($user_data)) {
+//             $result = create_alumni_user($user_data);
+//             if (is_wp_error($result)) {
+//                 error_log('User registration failed: ' . $result->get_error_message());
+//             } else {
+//                 error_log('User registered successfully with ID: ' . $result);
+//             }
+//         } else {
+//             error_log('No user data extracted from the submission.');
+//         }
+//     }
+// }
+
+
+
+
+
+// Handle Alumni Registration form submission
+// function handle_alumni_registration() {
+//     if (isset($_POST['your-subject']) && wp_verify_nonce($_POST['alumni_register_nonce'], 'alumni_register_action')) {
+//         $user_data = array(
+//             'user_login'    => sanitize_user($_POST['first-name'] . '.' . $_POST['last-name']),
+//             'user_email'    => sanitize_email($_POST['your-email']),
+//             'user_pass'     => wp_generate_password(),
+//             'role'          => 'alumni',
+//             'first_name'    => sanitize_text_field($_POST['first-name']),
+//             'last_name'     => sanitize_text_field($_POST['last-name']),
+//             'middle_name'   => sanitize_text_field($_POST['middle-name']),
+//             'date_of_birth' => sanitize_text_field($_POST['date-of-birth']),
+//             'marital_status'=> sanitize_text_field($_POST['marital-status']),
+//             'start_date'    => sanitize_text_field($_POST['start-date']),
+//             'end_date'      => sanitize_text_field($_POST['end-date']),
+//             'house'         => sanitize_text_field($_POST['house-of-residence']),
+//             'profession'    => sanitize_text_field($_POST['profession']),
+//             'phone'         => sanitize_text_field($_POST['telephone-number']),
+//             'expectations'  => sanitize_textarea_field($_POST['expectations']),
+//             'is_parent'     => isset($_POST['is-parent']) ? 1 : 0,
+//             'receive_communication' => isset($_POST['receive-communication']) ? 1 : 0,
+//         );
+
+//         $user_id = wp_insert_user($user_data);
+
+//         if (!is_wp_error($user_id)) {
+            
+//             wp_redirect(home_url('/alumni-registration-success'));
+//             exit;
+//         } else {
+            
+//             $error_message = $user_id->get_error_message();
+//             echo '<div class="error">' . $error_message . '</div>';
+//         }
+//     }
+// }
+// add_action('init', 'handle_alumni_registration');
+
